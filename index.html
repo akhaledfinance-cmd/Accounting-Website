@@ -1242,7 +1242,1182 @@ function toggleLanguage() {
         document.documentElement.setAttribute('lang', 'ar');
         document.getElementById('langLabel').textContent = 'English';
         document.getElementById('langLabelMobile').textContent = 'English';
+    }<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0GPGPKQJR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z0GPGPKQJR');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المكتب الاستشاري للمراجعة والمحاسبة | عمرو قطب</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Lemonada:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #111827;
+            --primary-light: #1F2937;
+            --accent: #FBBF24;
+            --accent-light: #F59E0B;
+            --dark: #111827;
+            --light: #F3F4F6;
+            --text: #111827;
+            --text-light: #6B7280;
+            --white: #FFFFFF;
+            --success: #10B981;
+            --bg-card: #FFFFFF;
+            --bg-input: #FFFFFF;
+            --border-color: #E5E7EB;
+            --nav-bg: rgba(255, 255, 255, 0.97);
+            --hero-overlay-1: rgba(17, 24, 39, 0.65);
+            --hero-overlay-2: rgba(17, 24, 39, 0.50);
+            --footer-bg: #111827;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.04);
+            --shadow-lg: 0 10px 30px rgba(0,0,0,0.08), 0 4px 8px rgba(0,0,0,0.04);
+            --section-bg-alt: #F3F4F6;
+            --radius: 18px;
+            --radius-sm: 12px;
+        }
+
+        body { font-family: 'IBM Plex Sans Arabic', sans-serif; background: var(--light); color: var(--text); overflow-x: hidden; line-height: 1.8; }
+        html { scroll-behavior: smooth; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Lemonada', sans-serif; }
+
+        .preloader { position: fixed; inset: 0; z-index: 9999; background: var(--white); display: flex; align-items: center; justify-content: center; }
+        .preloader.hidden { display: none; }
+        .preloader-content { text-align: center; }
+        .preloader-logo { height: 120px; margin: 0 auto 1.2rem; }
+        .preloader-logo img { height: 100%; width: auto; }
+        .preloader-text { color: var(--primary); font-size: 0.95rem; font-weight: 700; letter-spacing: 0.5px; font-family: 'Lemonada', sans-serif; }
+        .preloader-sub { color: var(--text-light); font-size: 0.78rem; font-weight: 400; margin-top: 0.3rem; font-family: 'Aref Ruqaa', serif; }
+
+        .navbar { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 0.6rem 5%; background: var(--nav-bg); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); will-change: box-shadow; }
+        .navbar.scrolled { box-shadow: var(--shadow-md); }
+        .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+        .logo-icon { height: 44px; width: auto; display: flex; align-items: center; }
+        .logo-icon img { height: 100%; width: auto; display: block; }
+        .logo-text { display: flex; flex-direction: column; }
+        .logo-name { font-family: 'Lemonada', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--primary); line-height: 1.3; }
+        .logo-sub { font-family: 'Aref Ruqaa', serif; font-size: 0.7rem; color: var(--text-light); }
+        .nav-links { display: flex; align-items: center; gap: 0.1rem; list-style: none; }
+        .nav-links a { color: var(--text-light); text-decoration: none; font-size: 0.85rem; font-weight: 500; padding: 0.45rem 0.8rem; border-radius: var(--radius-sm); }
+        .nav-links a:hover { color: var(--primary); background: var(--light); }
+        .nav-cta { background: var(--accent) !important; color: var(--primary) !important; font-weight: 700 !important; border-radius: var(--radius-sm) !important; }
+        .nav-cta:hover { background: var(--accent-light) !important; }
+
+        .lang-btn { background: var(--light); border: 1px solid var(--border-color); color: var(--primary); padding: 0.4rem 0.8rem; border-radius: var(--radius-sm); cursor: pointer; font-family: inherit; font-size: 0.78rem; font-weight: 600; display: flex; align-items: center; gap: 0.3rem; margin-right: 0.5rem; }
+        .lang-btn:hover { background: var(--primary); color: var(--white); border-color: var(--primary); }
+
+        .mobile-toggle { display: none; background: none; border: none; color: var(--primary); font-size: 1.3rem; cursor: pointer; padding: 0.4rem; }
+
+        .hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; justify-content: flex-end; background: var(--dark); overflow: hidden; padding: 6rem 5% 4rem; }
+        .hero-bg { position: absolute; inset: 0; background: url('https://drive.google.com/thumbnail?id=1oxylGTu4h4q7GbSXeI84KZhhXq-ewErA&sz=w1920') center/cover; opacity: 0.55; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, var(--hero-overlay-1), var(--hero-overlay-2)); }
+        .hero-content { position: relative; z-index: 2; text-align: end; max-width: 650px; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(251,191,36,0.15); border: 1px solid rgba(251,191,36,0.3); color: var(--accent); padding: 0.45rem 1.1rem; border-radius: 50px; font-size: 0.78rem; font-weight: 600; margin-bottom: 1.5rem; margin-left: auto; }
+        .hero-title { font-family: 'Lemonada', sans-serif; font-size: clamp(1.8rem, 4.5vw, 2.8rem); color: var(--white); font-weight: 700; margin-bottom: 1rem; line-height: 1.35; }
+        .highlight { color: var(--accent); }
+        .hero-desc { color: rgba(255,255,255,0.65); font-size: 1rem; max-width: 600px; margin: 0 0 2rem; line-height: 1.8; }
+        .hero-btns { display: flex; gap: 1rem; justify-content: flex-end; flex-wrap: wrap; margin-bottom: 2.5rem; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.8rem; border-radius: var(--radius); font-weight: 700; font-size: 0.9rem; text-decoration: none; cursor: pointer; font-family: inherit; border: none; }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: var(--accent-light); }
+        .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.25); }
+        .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.06); }
+        .hero-stats { display: flex; gap: 2.5rem; justify-content: flex-end; flex-wrap: wrap; }
+        .stat-item { text-align: center; }
+        .stat-num { font-family: 'Lemonada', sans-serif; font-size: 2rem; font-weight: 700; color: var(--accent); display: block; }
+        .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.55); }
+
+        .section { padding: 5rem 5%; position: relative; }
+        .section-header { text-align: center; max-width: 650px; margin: 0 auto 3rem; position: relative; z-index: 2; }
+        .section-label { display: inline-block; color: var(--accent); font-weight: 700; font-size: 0.75rem; letter-spacing: 1.5px; margin-bottom: 0.5rem; }
+        .section-title { font-family: 'Lemonada', sans-serif; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; color: var(--text); margin-bottom: 0.6rem; }
+        .section-desc { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; }
+
+        .about { background: var(--bg-card); position: relative; overflow: hidden; }
+        .about-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&h=1080&fit=crop') center/cover; opacity: 0.03; z-index: 0; }
+        .about .section-header, .about .about-grid { position: relative; z-index: 2; }
+        .about-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; }
+        .about-image { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); }
+        .about-image img { width: 100%; height: 320px; object-fit: cover; display: block; }
+        .about-content { text-align: start; }
+        .about-content p { color: var(--text-light); font-size: 0.95rem; line-height: 1.9; margin-bottom: 1rem; }
+        .about-founder { display: inline-flex; align-items: center; gap: 1rem; background: var(--primary); padding: 1rem 1.8rem; border-radius: var(--radius); margin-top: 1.5rem; }
+        .founder-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; color: var(--primary); overflow: hidden; flex-shrink: 0; }
+        .founder-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .founder-info { text-align: right; }
+        .founder-info h4 { font-size: 0.88rem; font-weight: 700; color: var(--white); }
+        .founder-info p { font-size: 0.7rem; color: rgba(255,255,255,0.6); margin: 0; }
+
+        .services { background: var(--light); position: relative; overflow: hidden; }
+        .services-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=1080&fit=crop') center/cover; opacity: 0.03; z-index: 0; }
+        .services .section-header, .services .services-grid { position: relative; z-index: 2; }
+        .services-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .service-card { background: var(--bg-card); border-radius: var(--radius); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); overflow: hidden; position: relative; will-change: box-shadow; }
+        .service-card-image { width: 100%; height: 160px; object-fit: cover; display: block; }
+        .service-card-badge { position: absolute; top: 10px; right: 10px; background: var(--svc-color, var(--accent)); color: var(--primary); font-family: 'Lemonada', sans-serif; font-weight: 800; font-size: 0.7rem; padding: 0.2rem 0.55rem; border-radius: 8px; z-index: 2; }
+        .service-header { display: flex; align-items: center; gap: 0.7rem; padding: 0.9rem 1rem; cursor: pointer; }
+        .service-icon { width: 40px; height: 40px; min-width: 40px; border-radius: 10px; background: color-mix(in srgb, var(--svc-color, var(--accent)) 12%, transparent); display: flex; align-items: center; justify-content: center; color: var(--svc-color, var(--accent)); font-size: 0.95rem; }
+        .service-info { flex: 1; }
+        .service-info h3 { font-size: 0.88rem; font-weight: 700; color: var(--text); margin-bottom: 0.05rem; }
+        .service-info p { font-size: 0.75rem; color: var(--text-light); line-height: 1.5; }
+        .service-arrow { color: var(--text-light); font-size: 0.75rem; min-width: 16px; text-align: center; transition: transform 0.3s; }
+        .service-details { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .service-card.active .service-details { max-height: 600px; }
+        .service-card.active .service-arrow { transform: rotate(180deg); }
+        .service-card.active { box-shadow: var(--shadow-md); }
+        .service-details-inner { padding: 0 1rem 1rem; border-top: 1px solid var(--border-color); }
+        .service-details-inner ul { list-style: none; padding: 0.6rem 0 0; }
+        .service-details-inner ul li { padding: 0.3rem 0; padding-right: 1.2rem; position: relative; font-size: 0.82rem; color: var(--text-light); line-height: 1.7; }
+        .service-details-inner ul li::before { content: ''; position: absolute; top: 0.75rem; right: 0; width: 5px; height: 5px; border-radius: 50%; background: var(--svc-color, var(--accent)); }
+
+        .consult-cta { background: var(--primary); padding: 4rem 5%; text-align: center; position: relative; overflow: hidden; }
+        .consult-cta-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1920&h=1080&fit=crop') center/cover; opacity: 0.05; z-index: 0; }
+        .consult-cta-content { position: relative; z-index: 2; }
+        .consult-cta h2 { font-family: 'Lemonada', sans-serif; font-size: clamp(1.1rem, 2.5vw, 1.5rem); color: var(--white); font-weight: 700; margin-bottom: 0.5rem; }
+        .consult-cta p { color: rgba(255,255,255,0.6); font-size: 0.88rem; margin-bottom: 1.2rem; }
+        .consult-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #25D366; color: #fff; padding: 0.75rem 1.8rem; border-radius: var(--radius); text-decoration: none; font-weight: 700; font-size: 0.85rem; border: none; cursor: pointer; font-family: inherit; }
+        .consult-btn:hover { background: #1fb855; }
+
+        .partners { background: var(--bg-card); padding: 2.5rem 5%; position: relative; overflow: hidden; }
+        .partners-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1920&h=1080&fit=crop') center/cover; opacity: 0.03; z-index: 0; }
+        .partners-header, .partners-scroll { position: relative; z-index: 2; }
+        .partners-header { text-align: center; margin-bottom: 1.2rem; }
+        .partners-header h3 { font-family: 'Lemonada', sans-serif; font-size: 0.85rem; color: var(--text-light); font-weight: 500; }
+        .partners-scroll { display: flex; gap: 0.7rem; overflow-x: auto; padding: 0.5rem; scrollbar-width: none; }
+        .partners-scroll::-webkit-scrollbar { display: none; }
+        .partner-item { min-width: max-content; padding: 0.55rem 1.1rem; background: var(--light); border-radius: var(--radius-sm); border: 1px solid var(--border-color); }
+        .partner-item span { font-size: 0.78rem; font-weight: 600; color: var(--text); white-space: nowrap; }
+
+        .testimonials { background: var(--light); position: relative; overflow: hidden; }
+        .testimonials-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop') center/cover; opacity: 0.03; z-index: 0; }
+        .testimonials .section-header, .testimonials .testimonials-grid { position: relative; z-index: 2; }
+        .testimonials-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .testimonial-card { background: var(--bg-card); border-radius: var(--radius); padding: 1.8rem; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); }
+        .testimonial-text { color: var(--text-light); font-size: 0.88rem; line-height: 1.8; margin-bottom: 1.2rem; font-style: italic; }
+        .testimonial-author { display: flex; align-items: center; gap: 0.7rem; }
+        .testimonial-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--light); display: flex; align-items: center; justify-content: center; font-family: 'Lemonada', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--primary); }
+        .testimonial-info h4 { font-size: 0.85rem; font-weight: 700; color: var(--text); }
+        .testimonial-info span { font-size: 0.72rem; color: var(--text-light); }
+        .stars { color: var(--accent); font-size: 0.75rem; margin-top: 0.2rem; }
+
+        .comments { background: var(--bg-card); position: relative; overflow: hidden; }
+        .comments-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&h=1080&fit=crop') center/cover; opacity: 0.03; z-index: 0; }
+        .comments .section-header, .comments .comments-container { position: relative; z-index: 2; }
+        .comments-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .comment-form { background: var(--light); border-radius: var(--radius); padding: 1.8rem; }
+        .comment-form h3 { font-family: 'Lemonada', sans-serif; font-size: 1.1rem; margin-bottom: 1.2rem; color: var(--text); }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 0.7rem 0.9rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.88rem; background: var(--bg-input); color: var(--text); outline: none; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(251,191,36,0.1); }
+        .form-group textarea { resize: vertical; min-height: 90px; }
+        .comment-submit { width: 100%; padding: 0.75rem; background: var(--accent); color: var(--primary); border: none; border-radius: var(--radius-sm); font-weight: 700; font-size: 0.88rem; cursor: pointer; font-family: inherit; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+        .comment-submit:hover { background: var(--accent-light); }
+        .comments-list { display: flex; flex-direction: column; gap: 0.8rem; }
+        .comment-item { background: var(--light); border-radius: var(--radius-sm); padding: 1rem; }
+        .comment-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem; }
+        .comment-avatar { width: 30px; height: 30px; border-radius: 50%; background: #A78BFA; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.75rem; font-weight: 700; font-family: 'Lemonada', sans-serif; }
+        .comment-name { font-size: 0.82rem; font-weight: 700; color: var(--text); }
+        .comment-date { color: var(--text-light); font-size: 0.7rem; margin-right: auto; }
+        .comment-text { color: var(--text-light); font-size: 0.85rem; line-height: 1.7; }
+        .comment-empty { text-align: center; color: var(--text-light); padding: 2rem; font-size: 0.9rem; }
+
+        .contact { background: var(--light); position: relative; overflow: hidden; }
+        .contact-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&h=1080&fit=crop') center/cover; opacity: 0.03; z-index: 0; }
+        .contact .section-header, .contact .contact-grid { position: relative; z-index: 2; }
+        .contact-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+        .contact-info h3 { font-family: 'Lemonada', sans-serif; font-size: 1.25rem; color: var(--text); margin-bottom: 0.6rem; font-weight: 700; }
+        .contact-info > p { color: var(--text-light); margin-bottom: 1.5rem; font-size: 0.9rem; }
+        .contact-item { display: flex; align-items: flex-start; gap: 0.8rem; margin-bottom: 1rem; }
+        .contact-item i { width: 38px; height: 38px; min-width: 38px; background: var(--light); color: var(--accent); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; border: 1px solid var(--border-color); }
+        .contact-item h4 { color: var(--text); font-size: 0.82rem; font-weight: 700; }
+        .contact-item p { color: var(--text-light); font-size: 0.8rem; margin: 0; }
+        .contact-item a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .contact-item a:hover { text-decoration: underline; }
+        .map-container { margin-top: 1.2rem; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border-color); }
+        .map-container iframe { width: 100%; height: 200px; border: none; display: block; }
+
+        .contact-form { background: var(--bg-card); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); }
+        .contact-form h3 { font-family: 'Lemonada', sans-serif; font-size: 1.15rem; color: var(--text); margin-bottom: 1.2rem; font-weight: 700; }
+        .submit-btn { width: 100%; padding: 0.8rem; background: var(--accent); color: var(--primary); border: none; border-radius: var(--radius-sm); font-weight: 700; font-size: 0.92rem; cursor: pointer; font-family: inherit; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 0.3rem; }
+        .submit-btn:hover { background: var(--accent-light); }
+        .form-message { margin-top: 1rem; padding: 0.8rem; border-radius: var(--radius-sm); font-size: 0.85rem; text-align: center; display: none; }
+        .form-message.success { display: block; background: rgba(16,185,129,0.1); color: var(--success); }
+        .form-message.error { display: block; background: rgba(236,72,153,0.1); color: #EC4899; }
+
+        .footer { background: var(--footer-bg); padding: 3.5rem 5% 0; position: relative; overflow: hidden; }
+        .footer-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop') center/cover; opacity: 0.04; z-index: 0; }
+        .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; position: relative; z-index: 2; }
+        .footer-brand .logo { margin-bottom: 1rem; }
+        .footer-brand .logo-name { color: var(--white); }
+        .footer-brand .logo-sub { color: rgba(255,255,255,0.5); }
+        .footer-brand > p { color: rgba(255,255,255,0.45); font-size: 0.85rem; line-height: 1.8; margin-bottom: 1.2rem; }
+        .social-links { display: flex; gap: 0.5rem; }
+        .social-links a { width: 36px; height: 36px; border-radius: var(--radius-sm); background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; }
+        .social-links a:hover { background: var(--accent); color: var(--primary); }
+        .footer-col h4 { font-family: 'Lemonada', sans-serif; color: var(--white); font-size: 0.9rem; margin-bottom: 1rem; font-weight: 700; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 0.5rem; }
+        .footer-col ul li a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.82rem; }
+        .footer-col ul li a:hover { color: var(--accent); }
+        .footer-bottom { max-width: 1100px; margin: 2.5rem auto 0; padding: 1.2rem 0; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; position: relative; z-index: 2; }
+        .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+
+        .whatsapp-float { position: fixed; bottom: 2rem; left: 2rem; z-index: 900; width: 54px; height: 54px; border-radius: 50%; background: #25D366; color: #fff; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; will-change: transform; }
+
+        .fade-in { opacity: 1; transform: none; }
+        .delay-1, .delay-2, .delay-3, .delay-4 { transition-delay: 0s; }
+
+        .mobile-menu { position: fixed; top: 0; right: -100%; width: 75%; max-width: 300px; height: 100vh; height: 100dvh; background: var(--white); z-index: 1001; padding: 4rem 1.5rem 1.5rem; box-shadow: var(--shadow-lg); overflow-y: auto; transition: right 0.3s ease; will-change: right; }
+        .mobile-menu.active { right: 0; }
+        .mobile-menu-close { position: absolute; top: 1rem; left: 1rem; background: none; border: none; color: var(--primary); font-size: 1.1rem; cursor: pointer; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-sm); }
+        .mobile-menu-close:hover { background: var(--light); }
+        .mobile-menu ul { list-style: none; }
+        .mobile-menu li { margin-bottom: 0.5rem; }
+        .mobile-menu a { color: var(--text); text-decoration: none; font-size: 0.9rem; font-weight: 500; display: block; padding: 0.5rem 0; border-bottom: 1px solid var(--border-color); }
+        .mobile-menu a:hover { color: var(--accent); }
+        .mobile-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 1000; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; }
+        .mobile-overlay.active { opacity: 1; visibility: visible; }
+
+        .mobile-lang-btn { display: flex; align-items: center; justify-content: center; gap: 0.4rem; background: var(--light); border: 1px solid var(--border-color); color: var(--primary); width: 100%; padding: 0.6rem; border-radius: var(--radius-sm); cursor: pointer; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 0.82rem; font-weight: 600; margin-top: 1rem; }
+        .mobile-lang-btn:hover { background: var(--primary); color: var(--white); border-color: var(--primary); }
+
+        .dark {
+            --primary: #F3F4F6;
+            --primary-light: #E5E7EB;
+            --light: #111827;
+            --text: #F3F4F6;
+            --text-light: #9CA3AF;
+            --white: #1F2937;
+            --bg-card: #1F2937;
+            --bg-input: #1F2937;
+            --border-color: #374151;
+            --nav-bg: rgba(17, 24, 39, 0.97);
+            --hero-overlay-1: rgba(0, 0, 0, 0.85);
+            --hero-overlay-2: rgba(0, 0, 0, 0.75);
+            --section-bg-alt: #111827;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+            --shadow-lg: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .dark .preloader { background: #111827; }
+        .dark .preloader-text { color: #F3F4F6; }
+        .dark .preloader-sub { color: rgba(255,255,255,0.4); }
+        .dark .service-card-badge { color: #111827; }
+        .dark .about-founder { background: var(--white); }
+        .dark .founder-info h4 { color: var(--text); }
+        .dark .comment-avatar { background: var(--primary-light, #374151); }
+        .dark .testimonial-avatar { background: var(--primary-light, #374151); color: var(--text); }
+        .dark .consult-btn { color: #fff; }
+        .dark .map-container { border-color: var(--border-color); }
+        .dark-mode-btn { background: var(--light); border: 1px solid var(--border-color); color: var(--primary); width: 36px; height: 36px; border-radius: var(--radius-sm); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
+        .dark-mode-btn:hover { background: var(--accent); color: var(--primary); border-color: var(--accent); }
+
+        [dir="ltr"] .service-card-badge { right: auto; left: 10px; }
+        [dir="ltr"] .service-details-inner ul li { padding-right: 0; padding-left: 1.2rem; }
+        [dir="ltr"] .service-details-inner ul li::before { right: auto; left: 0; }
+        [dir="ltr"] .founder-info { text-align: left; }
+        [dir="ltr"] .comment-date { margin-right: 0; margin-left: auto; }
+        [dir="ltr"] .whatsapp-float { left: auto; right: 2rem; }
+        [dir="ltr"] .mobile-menu { right: auto; left: -100%; }
+        [dir="ltr"] .mobile-menu.active { left: 0; }
+        [dir="ltr"] .mobile-menu-close { left: auto; right: 1rem; }
+        [dir="ltr"] .lang-btn { margin-right: 0; margin-left: 0.5rem; }
+        [dir="ltr"] .about-grid .about-image { order: 2; }
+
+        @media (max-width: 1024px) {
+            .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .lang-btn { display: none; }
+            .mobile-toggle { display: block; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .hero-stats { gap: 1.2rem; justify-content: center; }
+            .comments-container { grid-template-columns: 1fr; }
+            .section { padding: 3.5rem 4%; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-image img { height: 220px; }
+            .hero-btns { justify-content: center; }
+            .hero-content { text-align: center; max-width: 100%; }
+            .hero-badge { margin-left: 0; margin-right: auto; }
+            .hero-desc { margin: 0 auto 2rem; }
+            .consult-cta { padding: 3rem 4%; }
+            .partners { padding: 2rem 4%; }
+            .navbar { padding: 0.5rem 4%; }
+            .logo-name { font-size: 0.8rem; }
+            .logo-sub { font-size: 0.65rem; }
+            .logo-icon { height: 38px; }
+            .service-card-image { height: 140px; }
+        }
+        @media (max-width: 400px) {
+            .hero-title { font-size: 1.6rem; }
+            .hero-stats { gap: 0.8rem; }
+            .stat-num { font-size: 1.5rem; }
+            .stat-label { font-size: 0.7rem; }
+            .btn { padding: 0.7rem 1.2rem; font-size: 0.82rem; }
+            .section { padding: 3rem 3.5%; }
+            .about-founder { flex-direction: column; text-align: center; padding: 1.2rem; }
+            .founder-info { text-align: center; }
+            .hero-btns { flex-direction: column; align-items: stretch; }
+            .hero-btns .btn { justify-content: center; }
+            .whatsapp-float { width: 48px; height: 48px; font-size: 1.3rem; bottom: 1.2rem; left: 1.2rem; }
+        }
+    </style>
+    <base target="_blank">
+</head>
+<body>
+<div class="preloader" id="preloader">
+    <div class="preloader-content">
+        <div class="preloader-logo">
+            <img src="https://drive.google.com/thumbnail?id=1Yst17cdY-pVpA7Iyy0QAs3fd-0KdY-t3&sz=w400" alt="المكتب الاستشاري" onerror="this.onerror=null;this.style.display='none';">
+        </div>
+        <div class="preloader-text">المكتب الاستشاري للمراجعة والمحاسبة</div>
+        <div class="preloader-sub">عمرو قطب</div>
+    </div>
+</div>
+
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="#" class="logo">
+            <div class="logo-icon">
+                <img src="https://drive.google.com/thumbnail?id=1Yst17cdY-pVpA7Iyy0QAs3fd-0KdY-t3&sz=w400" alt="المكتب الاستشاري" onerror="this.onerror=null;this.src='';this.alt='المكتب';this.parentElement.innerHTML='<i class=\'fas fa-landmark\' style=\'font-size:1.5rem;color:#FBBF24\'></i>';">
+            </div>
+            <div class="logo-text">
+                <span class="logo-name">المكتب الاستشاري</span>
+                <span class="logo-sub">للمراجعة والمحاسبة</span>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home" data-i18n="nav_home">الرئيسية</a></li>
+            <li><a href="#about" data-i18n="nav_about">من نحن</a></li>
+            <li><a href="#services" data-i18n="nav_services">خدماتنا</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">اتصل بنا</a></li>
+            <li><a href="#contact" class="nav-cta" data-i18n="nav_cta">استشارة مجانية</a></li>
+        </ul>
+        <button class="dark-mode-btn" id="darkToggle" onclick="toggleDarkMode()" title="تبديل الوضع"><i class="fas fa-moon" id="darkIcon"></i></button>
+        <button class="lang-btn" id="langToggle" onclick="toggleLanguage()"><i class="fas fa-globe"></i> <span id="langLabel">English</span></button>
+        <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+    </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileMenuClose"><i class="fas fa-times"></i></button>
+    <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border-color);">
+        <div class="logo-icon">
+            <img src="https://drive.google.com/thumbnail?id=1Yst17cdY-pVpA7Iyy0QAs3fd-0KdY-t3&sz=w400" alt="المكتب الاستشاري" onerror="this.onerror=null;this.style.display='none';">
+        </div>
+        <div class="logo-text">
+            <span class="logo-name">المكتب الاستشاري</span>
+            <span class="logo-sub">للمراجعة والمحاسبة</span>
+        </div>
+    </div>
+    <ul>
+        <li><a href="#home" class="mobile-link" data-i18n="nav_home">الرئيسية</a></li>
+        <li><a href="#about" class="mobile-link" data-i18n="nav_about">من نحن</a></li>
+        <li><a href="#services" class="mobile-link" data-i18n="nav_services">خدماتنا</a></li>
+        <li><a href="#contact" class="mobile-link" data-i18n="nav_contact">اتصل بنا</a></li>
+    </ul>
+    <button class="mobile-lang-btn" onclick="toggleLanguage()"><i class="fas fa-globe"></i> <span id="langLabelMobile">English</span></button>
+</div>
+
+<section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-badge fade-in">
+            <i class="fas fa-shield-alt"></i>
+            <span data-i18n="hero_badge">منذ عام 2014 — 12 سنة من الخبرة</span>
+        </div>
+        <h1 class="hero-title fade-in delay-1">
+            <span data-i18n="hero_t1">خبرة محاسبية...</span><br>
+            <span data-i18n="hero_t2_prefix">و</span><span class="highlight" data-i18n="hero_t2_highlight">حلول ضريبية متكاملة</span>
+        </h1>
+        <p class="hero-desc fade-in delay-2" data-i18n="hero_desc">
+            المكتب الاستشاري للمراجعة والمحاسبة يقدم حلولاً متكاملة تساعد أصحاب الأعمال على تحقيق الامتثال الضريبي واتخاذ القرارات المالية السليمة منذ عام 2014.
+        </p>
+        <div class="hero-btns fade-in delay-3">
+            <a href="#contact" class="btn btn-primary"><i class="fas fa-calendar-check"></i> <span data-i18n="hero_btn1">احجز استشارة مجانية</span></a>
+            <a href="https://wa.me/201116158786" target="_blank" class="btn btn-outline" style="border:none;cursor:pointer;font-family:inherit;display:inline-flex;text-decoration:none;"><i class="fab fa-whatsapp"></i> <span data-i18n="hero_btn2">تواصل عبر واتساب</span></a>
+        </div>
+        <div class="hero-stats fade-in delay-4">
+            <div class="stat-item">
+                <span class="stat-num">12+</span>
+                <span class="stat-label" data-i18n="stat1">سنة خبرة</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">500+</span>
+                <span class="stat-label" data-i18n="stat2">عميل ناجح</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">10</span>
+                <span class="stat-label" data-i18n="stat3">خدمة متخصصة</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">13</span>
+                <span class="stat-label" data-i18n="stat4">جهة حكومية</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section about" id="about">
+    <div class="about-bg"></div>
+    <div class="section-header fade-in">
+        <span class="section-label" data-i18n="about_label">من نحن</span>
+        <h2 class="section-title" data-i18n="about_title">شريكك الموثوق منذ عام 2014</h2>
+        <p class="section-desc" data-i18n="about_desc">خبرة ربع قرن في خدمات المحاسبة والمراجعة والاستشارات الضريبية</p>
+    </div>
+    <div class="about-grid fade-in">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop" alt="المحاسبة والمراجعة" loading="lazy" width="600" height="400">
+        </div>
+        <div class="about-content">
+            <p data-i18n="about_p1">المكتب الاستشاري للمراجعة والمحاسبة متخصص في خدمات المحاسبة والمراجعة والاستشارات الضريبية وتأسيس الشركات. نقدم حلولاً مالية متكاملة تساعد أصحاب الأعمال على تحقيق الامتثال الضريبي واتخاذ القرارات المالية السليمة.</p>
+            <p data-i18n="about_p2">من خلال فريق متخصص وخبرة عملية في مختلف القطاعات التجارية والصناعية والخدمية، نضمن لكم خدمة احترافية تلبي جميع احتياجاتكم المالية منذ عام 2014.</p>
+            <div class="about-founder">
+                <div class="founder-avatar">
+                    <img src="https://z-cdn-media.chatglm.cn/files/deecc931-fe82-4731-b4ee-f647c5b4d218.jpg?auth_key=1885072076-72616d05f44d4d5abe05a6d5843de62a-0-1f5b48a8d28c3a0e5d3626490edba235" alt="عمرو قطب" loading="lazy">
+                </div>
+                <div class="founder-info">
+                    <h4>عمرو قطب</h4>
+                    <p data-i18n="founder_role">محاسب قانوني وخبير ضرائب</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section services" id="services">
+    <div class="services-bg"></div>
+    <div class="section-header fade-in">
+        <span class="section-label" data-i18n="services_label">خدماتنا</span>
+        <h2 class="section-title" data-i18n="services_title">حلول متكاملة لكل احتياجاتك</h2>
+        <p class="section-desc" data-i18n="services_desc">اضغط على أي خدمة لمعرفة التفاصيل الكاملة</p>
+    </div>
+    <div class="services-grid">
+        <div class="service-card fade-in" style="--svc-color: #FBBF24;">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=300&fit=crop" alt="Tax Services" class="service-card-image" loading="lazy" width="600" height="300">
+            <div class="service-card-badge">01</div>
+            <div class="service-header" onclick="toggleService(this)">
+                <div class="service-icon"><i class="fas fa-calculator"></i></div>
+                <div class="service-info">
+                    <h3 data-i18n="s1_title">الخدمات الضريبية</h3>
+                    <p data-i18n="s1_desc">إعداد الإقرارات الضريبية، ضريبة القيمة المضافة، فتح ملفات ضريبية</p>
+                </div>
+                <i class="fas fa-chevron-down service-arrow"></i>
+            </div>
+            <div class="service-details">
+                <div class="service-details-inner">
+                    <ul>
+                        <li data-i18n="s1_d1">إعداد وتقديم الإقرارات الضريبية للأشخاص والشركات</li>
+                        <li data-i18n="s1_d2">إعداد وتقديم إقرارات ضريبة القيمة المضافة (VAT)</li>
+                        <li data-i18n="s1_d3">فتح ملفات ضريبية للشركات والأفراد</li>
+                        <li data-i18n="s1_d4">مراجعة العوائد الضريبية والتأكد من صحتها</li>
+                        <li data-i18n="s1_d5">التعامل مع الفواتير الإلكترونية</li>
+                        <li data-i18n="s1_d6">التواصل مع الوزارات المختصة والتسويات الضريبية</li>
+                        <li data-i18n="s1_d7">تقديم الاعتراضات على التقديرات الضريبية</li>
+                        <li data-i18n="s1_d8">متابعة ملفات الضريبة العقارية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="service-card fade-in" style="--svc-color: #10B981;">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=300&fit=crop" alt="Tax Audit" class="service-card-image" loading="lazy" width="600" height="300">
+            <div class="service-card-badge">02</div>
+            <div class="service-header" onclick="toggleService(this)">
+                <div class="service-icon"><i class="fas fa-search-dollar"></i></div>
+                <div class="service-info">
+                    <h3 data-i18n="s2_title">الفحص الضريبي</h3>
+                    <p data-i18n="s2_desc">فحص الإقرارات، فحص السجلات، التمثيل أمام الضرائب</p>
+                </div>
+                <i class="fas fa-chevron-down service-arrow"></i>
+            </div>
+            <div class="service-details">
+                <div class="service-details-inner">
+                    <ul>
+                        <li data-i18n="s2_d1">فحص الإقرارات الضريبية قبل التقديم</li>
+                        <li data-i18n="s2_d2">فحص السجلات المحاسبية والتأكد من توافقها</li>
+                        <li data-i18n="s2_d3">فحص الفواتير الضريبية والتأكد من صحتها</li>
+                        <li data-i18n="s2_d4">فحص العقود من الناحية الضريبية</li>
+                        <li data-i18n="s2_d5">التمثيل أمام مصلحة الضرائب</li>
+                        <li data-i18n="s2_d6">تقديم الاعتراضات على التقديرات الضريبية</li>
+                        <li data-i18n="s2_d7">متابعة التسويات الضريبية</li>
+                        <li data-i18n="s2_d8">إعداد التقارير الضريبية الشاملة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="service-card fade-in" style="--svc-color: #A78BFA;">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=300&fit=crop" alt="Company Formation" class="service-card-image" loading="lazy" width="600" height="300">
+            <div class="service-card-badge">03</div>
+            <div class="service-header" onclick="toggleService(this)">
+                <div class="service-icon"><i class="fas fa-building"></i></div>
+                <div class="service-info">
+                    <h3 data-i18n="s3_title">تأسيس الشركات</h3>
+                    <p data-i18n="s3_desc">استشارات قانونية، تأسيس وتسويات، عقود التأسيس</p>
+                </div>
+                <i class="fas fa-chevron-down service-arrow"></i>
+            </div>
+            <div class="service-details">
+                <div class="service-details-inner">
+                    <ul>
+                        <li data-i18n="s3_d1">تقديم الاستشارات القانونية والإجرائية للشركات</li>
+                        <li data-i18n="s3_d2">تأسيس الشركات وتسوياتها في هيئة الاستثمار</li>
+                        <li data-i18n="s3_d3">إنهاء إجراءات التأسيس لدى هيئة الاستثمار</li>
+                        <li data-i18n="s3_d4">إعداد وصياغة عقود التأسيس وتحويل عقود الشركات</li>
+                        <li data-i18n="s3_d5">زيادة أو تخفيض رأس المال</li>
+                        <li data-i18n="s3_d6">إضافة أو خروج الشركاء وتغيير النشاط</li>
+                        <li data-i18n="s3_d7">تصفية الشركات وإنهاء إجراءات التصفية</li>
+                        <li data-i18n="s3_d8">استخراج السجل التجاري والبطاقة الضريبية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="service-card fade-in" style="--svc-color: #EC4899;">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=300&fit=crop" alt="Commercial Register" class="service-card-image" loading="lazy" width="600" height="300">
+            <div class="service-card-badge">04</div>
+            <div class="service-header" onclick="toggleService(this)">
+                <div class="service-icon"><i class="fas fa-clipboard-list"></i></div>
+                <div class="service-info">
+                    <h3 data-i18n="s4_title">السجل التجاري والغرفة التجارية</h3>
+                    <p data-i18n="s4_desc">استخراج وتجديد السجل، تعديل البيانات، استخراج المبسوط</p>
+                </div>
+                <i class="fas fa-chevron-down service-arrow"></i>
+            </div>
+            <div class="service-details">
+                <div class="service-details-inner">
+                    <ul>
+                        <li data-i18n="s4_d1">استخراج وتجديد السجل التجاري</li>
+                        <li data-i18n="s4_d2">تعديل بيانات السجل التجاري (النشاط – العنوان – رأس المال – الشركاء)</li>
+                        <li data-i18n="s4_d3">استخراج رسوم من السجل التجاري</li>
+                        <li data-i18n="s4_d4">استخراج مبسوط من السجل التجاري</li>
+                        <li data-i18n="s4_d5">تجديد العضوية في الغرفة التجارية</li>
+                        <li data-i18n="s4_d6">تعديل بيانات العضوية في الغرفة التجارية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="service-card fade-in" style="--svc-color: #3B82F6;">
+            <img src="https://sfile.chatglm.cn/images-ppt/7b8b6132328a.jpg" alt="Import Export" class="service-card-image" loading="lazy" width="600" height="300">
+            <div class="service-card-badge">05</div>
+            <div class="service-header" onclick="toggleService(this)">
+                <div class="service-icon"><i class="fas fa-ship"></i></div>
+                <div class="service-info">
+                    <h3 data-i18n="s5_title">الاستيراد والتصدير</h3>
+                    <p data-i18n="s5_desc">تجهيز المستندات، تحديث البطاقات، تخليص البيانات</p>
+                </div>
+                <i class="fas fa-chevron-down service-arrow"></i>
+            </div>
+            <div class="service-details">
+                <div class="service-details-inner">
+                    <ul>
+                        <li data-i18n="s5_d1">حجز الدورات التدريبية للمصدرين والمستوردين</li>
+                        <li data-i18n="s5_d2">تجهيز المستندات المطلوبة لقيد المنشآت</li>
+                        <li data-i18n="s5_d3">تحديث بطاقات الاستيراد والتصدير</li>
+                        <li data-i18n="s5_d4">تخليص بيانات البطاقات والسجلات</li>
+                        <li data-i18n="s5_d5">إضافة أو تحويل الأنشطة التجارية</li>
+                        <li data-i18n="s5_d6">متابعة إجراءات الاستيراد والتصدير</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="service-card fade-in" style="--svc-color: #F97316;">
+            <img src="https://sfile.chatglm.cn/images-ppt/d00adab84176.jpg" alt="Industrial" class="service-card-image" loading="lazy" width="600" height="300">
+            <div class="service-card-badge">06</div>
+            <div class="service-header" onclick="toggleService(this)">
+                <div class="service-icon"><i class="fas fa-industry"></i></div>
+                <div class="service-info">
+                    <h3 data-i18n="s6_title">السجل الصناعي والرخص الصناعية</h3>
+                    <p data-i18n="s6_desc">استخراج وتجديد السجل الصناعي، شهادات اتحاد الصناعات</p>
+                </div>
+                <i class="fas fa-chevron-down service-arrow"></i>
+            </div>
+            <div class="service-details">
+                <div class="service-details-inner">
+                    <ul>
+                        <li data-i18n="s6_d1">استخراج وتجديد السجل الصناعي</li>
+                        <li data-i18n="s6_d2">استخراج شهادات إجراءات التسجيل أمام اتحاد الصناعات</li>
+                        <li data-i18n="s6_d3">إنهاء الإجراءات الخاصة بالمصانع والمنشآت الصناعية</li>
+                        <li data-i18n="s6_d4">تقديم الاستشارات المتعلقة بالسجل الصناعي</li>
+                        <li data-i18n="s6_d5">متابعة إجراءات الحصول على الرخص الصناعية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="service-card fade-in" style="--svc-color: #6366F1;">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop" alt="E-Invoicing" class="service-card-image" loading="lazy" width="600" height="300">
+            <div class="service-card-badge">07</div>
+            <div class="service-header" onclick="toggleService(this)">
+                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                <div class="service-info">
+                    <h3 data-i18n="s7_title">المنظومة الإلكترونية</h3>
+                    <p data-i18n="s7_desc">تفعيل الفاتورة الإلكترونية، استخراج وتحديث Token</p>
+                </div>
+                <i class="fas fa-chevron-down service-arrow"></i>
+            </div>
+            <div class="service-details">
+                <div class="service-details-inner">
+                    <ul>
+                        <li data-i18n="s7_d1">تفعيل الفاتورة الإلكترونية Portal</li>
+                        <li data-i18n="s7_d2">استخراج وتحديث Token</li>
+                        <li data-i18n="s7_d3">إصدار وإرسال الفواتير الإلكترونية</li>
+                        <li data-i18n="s7_d4">متابعة فواتير البيع والشراء على المنظومة</li>
+                        <li data-i18n="s7_d5">مراجعة العوائد وإعداد الفواتير</li>
+                        <li data-i18n="s7_d6">إضافة وتحديث أكواد الأصناف</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="service-card fade-in" style="--svc-color: #14B8A6;">
+            <img src="https://sfile.chatglm.cn/images-ppt/4aa04193f4c1.jpg" alt="Social Insurance" class="service-card-image" loading="lazy" width="600" height="300">
+            <div class="service-card-badge">08</div>
+            <div class="service-header" onclick="toggleService(this)">
+                <div class="service-icon"><i class="fas fa-hands-helping"></i></div>
+                <div class="service-info">
+                    <h3 data-i18n="s8_title">التأمينات الاجتماعية</h3>
+                    <p data-i18n="s8_desc">فتح الملفات، تقديم الإقرارات، تسوية المستحقات</p>
+                </div>
+                <i class="fas fa-chevron-down service-arrow"></i>
+            </div>
+            <div class="service-details">
+                <div class="service-details-inner">
+                    <ul>
+                        <li data-i18n="s8_d1">فتح ملفات التأمينات الاجتماعية للشركات</li>
+                        <li data-i18n="s8_d2">تقديم الإقرارات الشهرية والسنوية</li>
+                        <li data-i18n="s8_d3">تسوية المستحقات التأمينية</li>
+                        <li data-i18n="s8_d4">متابعة إجراءات المعاشات والتعويضات</li>
+                        <li data-i18n="s8_d5">التعامل مع الهيئة العامة للتأمينات الاجتماعية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="service-card fade-in" style="--svc-color: #EF4444;">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=300&fit=crop" alt="Accounting" class="service-card-image" loading="lazy" width="600" height="300">
+            <div class="service-card-badge">09</div>
+            <div class="service-header" onclick="toggleService(this)">
+                <div class="service-icon"><i class="fas fa-bookkeeping"></i></div>
+                <div class="service-info">
+                    <h3 data-i18n="s9_title">الخدمات المحاسبية</h3>
+                    <p data-i18n="s9_desc">إمساك الدفاتر، الميزانيات، القوائم المالية</p>
+                </div>
+                <i class="fas fa-chevron-down service-arrow"></i>
+            </div>
+            <div class="service-details">
+                <div class="service-details-inner">
+                    <ul>
+                        <li data-i18n="s9_d1">إمساك الدفاتر المحاسبية والسجلات</li>
+                        <li data-i18n="s9_d2">إعداد الميزانيات العمومية</li>
+                        <li data-i18n="s9_d3">إعداد القوائم المالية</li>
+                        <li data-i18n="s9_d4">مراجعة الحسابات الختامية</li>
+                        <li data-i18n="s9_d5">تصميم النظم المحاسبية</li>
+                        <li data-i18n="s9_d6">الاستشارات المالية والمحاسبية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="consult-cta">
+    <div class="consult-cta-bg"></div>
+    <div class="consult-cta-content fade-in">
+        <h2 data-i18n="cta_title">هل تحتاج استشارة ضريبية أو محاسبية؟</h2>
+        <p data-i18n="cta_desc">تواصل معنا الآن عبر الواتساب واحصل على استشارة مجانية</p>
+        <a href="https://wa.me/201116158786" target="_blank" class="consult-btn"><i class="fab fa-whatsapp"></i> <span data-i18n="cta_btn">تواصل عبر واتساب</span></a>
+    </div>
+</section>
+
+<section class="partners">
+    <div class="partners-bg"></div>
+    <div class="partners-header">
+        <h3 data-i18n="partners_title">تعاملنا مع الجهات الحكومية والمؤسسات</h3>
+    </div>
+    <div class="partners-scroll">
+        <div class="partner-item"><span>هيئة الضرائب</span></div>
+        <div class="partner-item"><span>هيئة الاستثمار</span></div>
+        <div class="partner-item"><span>السجل التجاري</span></div>
+        <div class="partner-item"><span>الغرفة التجارية</span></div>
+        <div class="partner-item"><span>هيئة التأمينات</span></div>
+        <div class="partner-item"><span>اتحاد الصناعات</span></div>
+        <div class="partner-item"><span>المنظومة الإلكترونية</span></div>
+        <div class="partner-item"><span>هيئة التخطيط</span></div>
+        <div class="partner-item"><span>مصلحة الضرائب العقارية</span></div>
+        <div class="partner-item"><span>الشهر العقاري</span></div>
+        <div class="partner-item"><span>هيئة الرقابة الإدارية</span></div>
+        <div class="partner-item"><span>البنك المركزي</span></div>
+        <div class="partner-item"><span>جهات حكومية أخرى</span></div>
+    </div>
+</section>
+
+<section class="section testimonials" id="testimonials">
+    <div class="testimonials-bg"></div>
+    <div class="section-header fade-in">
+        <span class="section-label" data-i18n="testimonials_label">آراء عملائنا</span>
+        <h2 class="section-title" data-i18n="testimonials_title">ماذا يقول عملاؤنا عنا</h2>
+        <p class="section-desc" data-i18n="testimonials_desc">نفخر بثقة عملائنا وشراكتنا المستمرة معهم</p>
+    </div>
+    <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+            <div class="testimonial-text" data-i18n="t1_text">"مكتب محترف جداً في التعامل مع الإقرارات الضريبية. ساعدونا في تسوية ملفات ضريبية متراكمة منذ سنوات بكل احترافية."</div>
+            <div class="testimonial-author">
+                <div class="testimonial-avatar">أ</div>
+                <div class="testimonial-info">
+                    <h4 data-i18n="t1_name">أحمد محمد</h4>
+                    <span data-i18n="t1_role">صاحب شركة تجارية</span>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card fade-in">
+            <div class="testimonial-text" data-i18n="t2_text">"خدمة ممتازة في تأسيس الشركة وإجراءات السجل التجاري. تم إنهاء كل المعاملات في وقت قياسي وبأسعار مناسبة."</div>
+            <div class="testimonial-author">
+                <div class="testimonial-avatar">س</div>
+                <div class="testimonial-info">
+                    <h4 data-i18n="t2_name">سارة علي</h4>
+                    <span data-i18n="t2_role">مؤسسة شركة استشارات</span>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card fade-in">
+            <div class="testimonial-text" data-i18n="t3_text">"نتعامل مع المكتب منذ أكثر من 5 سنوات في جميع الأمور المحاسبية والضريبية. نثق بهم تماماً ويوفرون علينا الكثير من الوقت والجهد."</div>
+            <div class="testimonial-author">
+                <div class="testimonial-avatar">م</div>
+                <div class="testimonial-info">
+                    <h4 data-i18n="t3_name">محمود حسن</h4>
+                    <span data-i18n="t3_role">مدير مصنع صناعي</span>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section comments" id="comments">
+    <div class="comments-bg"></div>
+    <div class="section-header fade-in">
+        <span class="section-label" data-i18n="comments_label">التقييمات</span>
+        <h2 class="section-title" data-i18n="comments_title">شاركنا رأيك</h2>
+        <p class="section-desc" data-i18n="comments_desc">نحن نسعد بسماع آرائكم واقتراحاتكم لتحسين خدماتنا</p>
+    </div>
+    <div class="comments-container fade-in">
+        <div class="comment-form">
+            <h3 data-i18n="comment_form_title">أضف تقييمك</h3>
+            <div class="form-group">
+                <label data-i18n="comment_name_label">الاسم</label>
+                <input type="text" id="commentName" placeholder="اكتب اسمك">
+            </div>
+            <div class="form-group">
+                <label data-i18n="comment_text_label">التقييم</label>
+                <textarea id="commentText" placeholder="اكتب تقييمك هنا..."></textarea>
+            </div>
+            <button class="comment-submit" onclick="addComment()"><i class="fas fa-paper-plane"></i> <span data-i18n="comment_submit">إرسال التقييم</span></button>
+        </div>
+        <div class="comments-list" id="commentsList">
+            <div class="comment-empty" data-i18n="comment_empty">لا توجد تقييمات بعد. كن أول من يقيمنا!</div>
+        </div>
+    </div>
+</section>
+
+<section class="section contact" id="contact">
+    <div class="contact-bg"></div>
+    <div class="section-header fade-in">
+        <span class="section-label" data-i18n="contact_label">اتصل بنا</span>
+        <h2 class="section-title" data-i18n="contact_title">تواصل معنا الآن</h2>
+        <p class="section-desc" data-i18n="contact_desc">نحن هنا لمساعدتك في جميع استفساراتك</p>
+    </div>
+    <div class="contact-grid fade-in">
+        <div class="contact-info">
+            <h3 data-i18n="contact_info_title">معلومات التواصل</h3>
+            <p data-i18n="contact_info_desc">تواصل معنا مباشرة عبر الأرقام التالية أو املأ النموذج وسنرد عليك في أقرب وقت.</p>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp"></i>
+                <div>
+                    <h4 data-i18n="contact_whatsapp">واتساب</h4>
+                    <p><a href="https://wa.me/201116158786" target="_blank">01116158786</a></p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <h4 data-i18n="contact_phone">اتصال</h4>
+                    <p><a href="tel:01062003239">01062003239</a></p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h4 data-i18n="contact_address">العنوان</h4>
+                    <p data-i18n="contact_address_text">52 ش المتحف، حلمية الزيتون، عين شمس، القاهرة</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.062745200941!2d31.3211756!3d30.121018000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145815bb419c23bf%3A0xebbbd8497a62a0ce!2s52%20Al%20Matrya%20Museum%2C%20Helmeyat%20AZ%20Zaytoun%2C%20Ain%20Shams%2C%20Cairo%20Governorate%204541107!5e0!3m2!1sen!2seg!4v1785081445992!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h3 data-i18n="contact_form_title">أرسل رسالة</h3>
+            <div class="form-group">
+                <label data-i18n="form_name">الاسم</label>
+                <input type="text" id="contactName" placeholder="اكتب اسمك الكامل">
+            </div>
+            <div class="form-group">
+                <label data-i18n="form_phone">رقم الهاتف</label>
+                <input type="tel" id="contactPhone" placeholder="اكتب رقم هاتفك">
+            </div>
+            <div class="form-group">
+                <label data-i18n="form_service">الخدمة المطلوبة</label>
+                <select id="contactService">
+                    <option value="" data-i18n="form_service_placeholder">اختر الخدمة</option>
+                    <option value="tax" data-i18n="form_service_tax">خدمات ضريبية</option>
+                    <option value="audit" data-i18n="form_service_audit">فحص ضريبي</option>
+                    <option value="company" data-i18n="form_service_company">تأسيس شركات</option>
+                    <option value="commercial" data-i18n="form_service_commercial">سجل تجاري</option>
+                    <option value="import" data-i18n="form_service_import">استيراد وتصدير</option>
+                    <option value="industrial" data-i18n="form_service_industrial">سجل صناعي</option>
+                    <option value="electronic" data-i18n="form_service_electronic">منظومة إلكترونية</option>
+                    <option value="insurance" data-i18n="form_service_insurance">تأمينات اجتماعية</option>
+                    <option value="accounting" data-i18n="form_service_accounting">خدمات محاسبية</option>
+                    <option value="other" data-i18n="form_service_other">أخرى</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label data-i18n="form_message">الرسالة</label>
+                <textarea id="contactMessage" placeholder="اكتب تفاصيل استفسارك..." rows="4"></textarea>
+            </div>
+            <button class="submit-btn" onclick="submitContactForm()"><i class="fas fa-paper-plane"></i> <span data-i18n="form_submit">إرسال الرسالة</span></button>
+            <div class="form-message" id="formMessage"></div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-bg"></div>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <img src="https://drive.google.com/thumbnail?id=1Yst17cdY-pVpA7Iyy0QAs3fd-0KdY-t3&sz=w400" alt="المكتب الاستشاري" onerror="this.onerror=null;this.style.display='none';">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">المكتب الاستشاري</span>
+                    <span class="logo-sub">للمراجعة والمحاسبة</span>
+                </div>
+            </a>
+            <p data-i18n="footer_desc">المكتب الاستشاري للمراجعة والمحاسبة — شريكك الموثوق في جميع الخدمات المحاسبية والضريبية منذ عام 2014.</p>
+            <div class="social-links">
+                <a href="https://wa.me/201116158786" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="tel:01062003239" title="اتصال"><i class="fas fa-phone-alt"></i></a>
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4 data-i18n="footer_links">روابط سريعة</h4>
+            <ul>
+                <li><a href="#home" data-i18n="nav_home">الرئيسية</a></li>
+                <li><a href="#about" data-i18n="nav_about">من نحن</a></li>
+                <li><a href="#services" data-i18n="nav_services">خدماتنا</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">اتصل بنا</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 data-i18n="footer_services">خدماتنا</h4>
+            <ul>
+                <li><a href="#services" data-i18n="s1_title">الخدمات الضريبية</a></li>
+                <li><a href="#services" data-i18n="s3_title">تأسيس الشركات</a></li>
+                <li><a href="#services" data-i18n="s7_title">المنظومة الإلكترونية</a></li>
+                <li><a href="#services" data-i18n="s9_title">الخدمات المحاسبية</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 data-i18n="footer_contact">تواصل معنا</h4>
+            <ul>
+                <li><a href="https://wa.me/201116158786" target="_blank"><i class="fab fa-whatsapp" style="margin-left:0.4rem;color:#25D366;"></i> 01116158786</a></li>
+                <li><a href="tel:01062003239"><i class="fas fa-phone-alt" style="margin-left:0.4rem;color:var(--accent);"></i> 01062003239</a></li>
+                <li><a href="#"><i class="fas fa-map-marker-alt" style="margin-left:0.4rem;color:var(--accent);"></i> <span data-i18n="contact_address_text">52 ش المتحف، حلمية الزيتون</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p data-i18n="footer_copyright">© 2024 المكتب الاستشاري للمراجعة والمحاسبة — عمرو قطب. جميع الحقوق محفوظة.</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/201116158786" target="_blank" class="whatsapp-float" title="تواصل عبر واتساب"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+// Preloader
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.getElementById('preloader').classList.add('hidden');
+    }, 800);
+});
+
+// Navbar scroll
+window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
     }
+});
+
+// Mobile menu
+var mobileToggle = document.getElementById('mobileToggle');
+var mobileMenu = document.getElementById('mobileMenu');
+var mobileOverlay = document.getElementById('mobileOverlay');
+var mobileMenuClose = document.getElementById('mobileMenuClose');
+
+mobileToggle.addEventListener('click', function() {
+    mobileMenu.classList.add('active');
+    mobileOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+});
+
+function closeMobileMenu() {
+    mobileMenu.classList.remove('active');
+    mobileOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+mobileMenuClose.addEventListener('click', closeMobileMenu);
+mobileOverlay.addEventListener('click', closeMobileMenu);
+
+document.querySelectorAll('.mobile-link').forEach(function(link) {
+    link.addEventListener('click', closeMobileMenu);
+});
+
+// Service card toggle
+function toggleService(header) {
+    var card = header.parentElement;
+    var wasActive = card.classList.contains('active');
+    document.querySelectorAll('.service-card.active').forEach(function(c) {
+        c.classList.remove('active');
+    });
+    if (!wasActive) {
+        card.classList.add('active');
+    }
+}
+
+// WhatsApp function
+function openWhatsApp() {
+    window.open('https://wa.me/201116158786', '_blank');
+}
+
+// Dark mode
+function toggleDarkMode() {
+    document.body.classList.toggle('dark');
+    var icon = document.getElementById('darkIcon');
+    if (document.body.classList.contains('dark')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        localStorage.setItem('darkMode', 'true');
+    } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        localStorage.setItem('darkMode', 'false');
+    }
+}
+
+if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark');
+    document.getElementById('darkIcon').classList.remove('fa-moon');
+    document.getElementById('darkIcon').classList.add('fa-sun');
+}
+
+// i18n
+var translations = {
+    ar: {
+        nav_home: 'الرئيسية', nav_about: 'من نحن', nav_services: 'خدماتنا', nav_contact: 'اتصل بنا', nav_cta: 'استشارة مجانية',
+        hero_badge: 'منذ عام 2014 — 12 سنة من الخبرة',
+        hero_t1: 'خبرة محاسبية...', hero_t2_prefix: 'و', hero_t2_highlight: 'حلول ضريبية متكاملة',
+        hero_desc: 'المكتب الاستشاري للمراجعة والمحاسبة يقدم حلولاً متكاملة تساعد أصحاب الأعمال على تحقيق الامتثال الضريبي واتخاذ القرارات المالية السليمة منذ عام 2014.',
+        hero_btn1: 'احجز استشارة مجانية', hero_btn2: 'تواصل عبر واتساب',
+        stat1: 'سنة خبرة', stat2: 'عميل ناجح', stat3: 'خدمة متخصصة', stat4: 'جهة حكومية',
+        about_label: 'من نحن', about_title: 'شريكك الموثوق منذ عام 2014', about_desc: 'خبرة ربع قرن في خدمات المحاسبة والمراجعة والاستشارات الضريبية',
+        about_p1: 'المكتب الاستشاري للمراجعة والمحاسبة متخصص في خدمات المحاسبة والمراجعة والاستشارات الضريبية وتأسيس الشركات. نقدم حلولاً مالية متكاملة تساعد أصحاب الأعمال على تحقيق الامتثال الضريبي واتخاذ القرارات المالية السليمة.',
+        about_p2: 'من خلال فريق متخصص وخبرة عملية في مختلف القطاعات التجارية والصناعية والخدمية، نضمن لكم خدمة احترافية تلبي جميع احتياجاتكم المالية منذ عام 2014.',
+        founder_role: 'محاسب قانوني وخبير ضرائب',
+        services_label: 'خدماتنا', services_title: 'حلول متكاملة لكل احتياجاتك', services_desc: 'اضغط على أي خدمة لمعرفة التفاصيل الكاملة',
+        s1_title: 'الخدمات الضريبية', s1_desc: 'إعداد الإقرارات الضريبية، ضريبة القيمة المضافة، فتح ملفات ضريبية',
+        s1_d1: 'إعداد وتقديم الإقرارات الضريبية للأشخاص والشركات', s1_d2: 'إعداد وتقديم إقرارات ضريبة القيمة المضافة (VAT)', s1_d3: 'فتح ملفات ضريبية للشركات والأفراد', s1_d4: 'مراجعة العوائد الضريبية والتأكد من صحتها', s1_d5: 'التعامل مع الفواتير الإلكترونية', s1_d6: 'التواصل مع الوزارات المختصة والتسويات الضريبية', s1_d7: 'تقديم الاعتراضات على التقديرات الضريبية', s1_d8: 'متابعة ملفات الضريبة العقارية',
+        s2_title: 'الفحص الضريبي', s2_desc: 'فحص الإقرارات، فحص السجلات، التمثيل أمام الضرائب',
+        s2_d1: 'فحص الإقرارات الضريبية قبل التقديم', s2_d2: 'فحص السجلات المحاسبية والتأكد من توافقها', s2_d3: 'فحص الفواتير الضريبية والتأكد من صحتها', s2_d4: 'فحص العقود من الناحية الضريبية', s2_d5: 'التمثيل أمام مصلحة الضرائب', s2_d6: 'تقديم الاعتراضات على التقديرات الضريبية', s2_d7: 'متابعة التسويات الضريبية', s2_d8: 'إعداد التقارير الضريبية الشاملة',
+        s3_title: 'تأسيس الشركات', s3_desc: 'استشارات قانونية، تأسيس وتسويات، عقود التأسيس',
+        s3_d1: 'تقديم الاستشارات القانونية والإجرائية للشركات', s3_d2: 'تأسيس الشركات وتسوياتها في هيئة الاستثمار', s3_d3: 'إنهاء إجراءات التأسيس لدى هيئة الاستثمار', s3_d4: 'إعداد وصياغة عقود التأسيس وتحويل عقود الشركات', s3_d5: 'زيادة أو تخفيض رأس المال', s3_d6: 'إضافة أو خروج الشركاء وتغيير النشاط', s3_d7: 'تصفية الشركات وإنهاء إجراءات التصفية', s3_d8: 'استخراج السجل التجاري والبطاقة الضريبية',
+        s4_title: 'السجل التجاري والغرفة التجارية', s4_desc: 'استخراج وتجديد السجل، تعديل البيانات، استخراج المبسوط',
+        s4_d1: 'استخراج وتجديد السجل التجاري', s4_d2: 'تعديل بيانات السجل التجاري (النشاط – العنوان – رأس المال – الشركاء)', s4_d3: 'استخراج رسوم من السجل التجاري', s4_d4: 'استخراج مبسوط من السجل التجاري', s4_d5: 'تجديد العضوية في الغرفة التجارية', s4_d6: 'تعديل بيانات العضوية في الغرفة التجارية',
+        s5_title: 'الاستيراد والتصدير', s5_desc: 'تجهيز المستندات، تحديث البطاقات، تخليص البيانات',
+        s5_d1: 'حجز الدورات التدريبية للمصدرين والمستوردين', s5_d2: 'تجهيز المستندات المطلوبة لقيد المنشآت', s5_d3: 'تحديث بطاقات الاستيراد والتصدير', s5_d4: 'تخليص بيانات البطاقات والسجلات', s5_d5: 'إضافة أو تحويل الأنشطة التجارية', s5_d6: 'متابعة إجراءات الاستيراد والتصدير',
+        s6_title: 'السجل الصناعي والرخص الصناعية', s6_desc: 'استخراج وتجديد السجل الصناعي، شهادات اتحاد الصناعات',
+        s6_d1: 'استخراج وتجديد السجل الصناعي', s6_d2: 'استخراج شهادات إجراءات التسجيل أمام اتحاد الصناعات', s6_d3: 'إنهاء الإجراءات الخاصة بالمصانع والمنشآت الصناعية', s6_d4: 'تقديم الاستشارات المتعلقة بالسجل الصناعي', s6_d5: 'متابعة إجراءات الحصول على الرخص الصناعية',
+        s7_title: 'المنظومة الإلكترونية', s7_desc: 'تفعيل الفاتورة الإلكترونية، استخراج وتحديث Token',
+        s7_d1: 'تفعيل الفاتورة الإلكترونية Portal', s7_d2: 'استخراج وتحديث Token', s7_d3: 'إصدار وإرسال الفواتير الإلكترونية', s7_d4: 'متابعة فواتير البيع والشراء على المنظومة', s7_d5: 'مراجعة العوائد وإعداد الفواتير', s7_d6: 'إضافة وتحديث أكواد الأصناف',
+        s8_title: 'التأمينات الاجتماعية', s8_desc: 'فتح الملفات، تقديم الإقرارات، تسوية المستحقات',
+        s8_d1: 'فتح ملفات التأمينات الاجتماعية للشركات', s8_d2: 'تقديم الإقرارات الشهرية والسنوية', s8_d3: 'تسوية المستحقات التأمينية', s8_d4: 'متابعة إجراءات المعاشات والتعويضات', s8_d5: 'التعامل مع الهيئة العامة للتأمينات الاجتماعية',
+        s9_title: 'الخدمات المحاسبية', s9_desc: 'إمساك الدفاتر، الميزانيات، القوائم المالية',
+        s9_d1: 'إمساك الدفاتر المحاسبية والسجلات', s9_d2: 'إعداد الميزانيات العمومية', s9_d3: 'إعداد القوائم المالية', s9_d4: 'مراجعة الحسابات الختامية', s9_d5: 'تصميم النظم المحاسبية', s9_d6: 'الاستشارات المالية والمحاسبية',
+        cta_title: 'هل تحتاج استشارة ضريبية أو محاسبية؟', cta_desc: 'تواصل معنا الآن عبر الواتساب واحصل على استشارة مجانية', cta_btn: 'تواصل عبر واتساب',
+        partners_title: 'تعاملنا مع الجهات الحكومية والمؤسسات',
+        testimonials_label: 'آراء عملائنا', testimonials_title: 'ماذا يقول عملاؤنا عنا', testimonials_desc: 'نفخر بثقة عملائنا وشراكتنا المستمرة معهم',
+        t1_text: '"مكتب محترف جداً في التعامل مع الإقرارات الضريبية. ساعدونا في تسوية ملفات ضريبية متراكمة منذ سنوات بكل احترافية."', t1_name: 'أحمد محمد', t1_role: 'صاحب شركة تجارية',
+        t2_text: '"خدمة ممتازة في تأسيس الشركة وإجراءات السجل التجاري. تم إنهاء كل المعاملات في وقت قياسي وبأسعار مناسبة."', t2_name: 'سارة علي', t2_role: 'مؤسسة شركة استشارات',
+        t3_text: '"نتعامل مع المكتب منذ أكثر من 5 سنوات في جميع الأمور المحاسبية والضريبية. نثق بهم تماماً ويوفرون علينا الكثير من الوقت والجهد."', t3_name: 'محمود حسن', t3_role: 'مدير مصنع صناعي',
+        comments_label: 'التقييمات', comments_title: 'شاركنا رأيك', comments_desc: 'نحن نسعد بسماع آرائكم واقتراحاتكم لتحسين خدماتنا',
+        comment_form_title: 'أضف تقييمك', comment_name_label: 'الاسم', comment_text_label: 'التقييم', comment_submit: 'إرسال التقييم', comment_empty: 'لا توجد تقييمات بعد. كن أول من يقيمنا!',
+        contact_label: 'اتصل بنا', contact_title: 'تواصل معنا الآن', contact_desc: 'نحن هنا لمساعدتك في جميع استفساراتك',
+        contact_info_title: 'معلومات التواصل', contact_info_desc: 'تواصل معنا مباشرة عبر الأرقام التالية أو املأ النموذج وسنرد عليك في أقرب وقت.',
+        contact_whatsapp: 'واتساب', contact_phone: 'اتصال', contact_address: 'العنوان', contact_address_text: '52 ش المتحف، حلمية الزيتون، عين شمس، القاهرة',
+        contact_form_title: 'أرسل رسالة', form_name: 'الاسم', form_phone: 'رقم الهاتف', form_service: 'الخدمة المطلوبة', form_service_placeholder: 'اختر الخدمة', form_service_tax: 'خدمات ضريبية', form_service_audit: 'فحص ضريبي', form_service_company: 'تأسيس شركات', form_service_commercial: 'سجل تجاري', form_service_import: 'استيراد وتصدير', form_service_industrial: 'سجل صناعي', form_service_electronic: 'منظومة إلكترونية', form_service_insurance: 'تأمينات اجتماعية', form_service_accounting: 'خدمات محاسبية', form_service_other: 'أخرى', form_message: 'الرسالة', form_submit: 'إرسال الرسالة',
+        footer_desc: 'المكتب الاستشاري للمراجعة والمحاسبة — شريكك الموثوق في جميع الخدمات المحاسبية والضريبية منذ عام 2014.',
+        footer_links: 'روابط سريعة', footer_services: 'خدماتنا', footer_contact: 'تواصل معنا',
+        footer_copyright: '© 2024 المكتب الاستشاري للمراجعة والمحاسبة — عمرو قطب. جميع الحقوق محفوظة.'
+    },
+    en: {
+        nav_home: 'Home', nav_about: 'About', nav_services: 'Services', nav_contact: 'Contact', nav_cta: 'Free Consultation',
+        hero_badge: 'Since 2014 — 12 Years of Experience',
+        hero_t1: 'Accounting Expertise...', hero_t2_prefix: '& ', hero_t2_highlight: 'Integrated Tax Solutions',
+        hero_desc: 'The Advisory Office for Auditing and Accounting provides comprehensive solutions that help business owners achieve tax compliance and make sound financial decisions since 2014.',
+        hero_btn1: 'Book Free Consultation', hero_btn2: 'Chat on WhatsApp',
+        stat1: 'Years Experience', stat2: 'Successful Clients', stat3: 'Specialized Services', stat4: 'Government Entities',
+        about_label: 'About Us', about_title: 'Your Trusted Partner Since 2014', about_desc: 'A quarter century of expertise in accounting, auditing, and tax consulting services',
+        about_p1: 'The Advisory Office for Auditing and Accounting specializes in accounting, auditing, tax consulting, and company formation. We provide comprehensive financial solutions that help business owners achieve tax compliance and make sound financial decisions.',
+        about_p2: 'Through a specialized team and practical experience across various commercial, industrial, and service sectors, we guarantee you a professional service that meets all your financial needs since 2014.',
+        founder_role: 'Legal Accountant & Tax Expert',
+        services_label: 'Our Services', services_title: 'Comprehensive Solutions for All Your Needs', services_desc: 'Click on any service to see full details',
+        s1_title: 'Tax Services', s1_desc: 'Tax returns preparation, VAT, opening tax files',
+        s1_d1: 'Preparing and submitting tax returns for individuals and companies', s1_d2: 'Preparing and submitting VAT returns', s1_d3: 'Opening tax files for companies and individuals', s1_d4: 'Reviewing tax returns and verifying their accuracy', s1_d5: 'Handling electronic invoices', s1_d6: 'Communicating with relevant ministries and tax settlements', s1_d7: 'Filing objections to tax assessments', s1_d8: 'Following up on real estate tax files',
+        s2_title: 'Tax Audit', s2_desc: 'Returns audit, records review, tax representation',
+        s2_d1: 'Auditing tax returns before submission', s2_d2: 'Reviewing accounting records and ensuring compliance', s2_d3: 'Verifying tax invoices accuracy', s2_d4: 'Reviewing contracts from a tax perspective', s2_d5: 'Representing before the Tax Authority', s2_d6: 'Filing objections to tax assessments', s2_d7: 'Following up on tax settlements', s2_d8: 'Preparing comprehensive tax reports',
+        s3_title: 'Company Formation', s3_desc: 'Legal consulting, formation & settlement, incorporation contracts',
+        s3_d1: 'Providing legal and procedural consulting for companies', s3_d2: 'Company formation and settlement at the Investment Authority', s3_d3: 'Completing formation procedures at the Investment Authority', s3_d4: 'Drafting incorporation contracts and company contract transfers', s3_d5: 'Increasing or decreasing capital', s3_d6: 'Adding or removing partners and changing activity', s3_d7: 'Company liquidation and completing liquidation procedures', s3_d8: 'Extracting commercial register and tax card',
+        s4_title: 'Commercial Register & Chamber of Commerce', s4_desc: 'Issuing and renewing register, modifying data, extracting abstract',
+        s4_d1: 'Issuing and renewing commercial register', s4_d2: 'Modifying commercial register data (Activity – Address – Capital – Partners)', s4_d3: 'Extracting fees from commercial register', s4_d4: 'Extracting abstract from commercial register', s4_d5: 'Renewing Chamber of Commerce membership', s4_d6: 'Modifying Chamber of Commerce membership data',
+        s5_title: 'Import & Export', s5_desc: 'Document preparation, card updates, data clearance',
+        s5_d1: 'Booking training courses for importers and exporters', s5_d2: 'Preparing required documents for establishment registration', s5_d3: 'Updating import and export cards', s5_d4: 'Clearing card and register data', s5_d5: 'Adding or converting commercial activities', s5_d6: 'Following up import and export procedures',
+        s6_title: 'Industrial Register & Industrial Licenses', s6_desc: 'Issuing and renewing industrial register, Federation of Industries certificates',
+        s6_d1: 'Issuing and renewing industrial register', s6_d2: 'Extracting registration procedure certificates before the Federation of Industries', s6_d3: 'Completing procedures for factories and industrial establishments', s6_d4: 'Providing industrial register-related consulting', s6_d5: 'Following up procedures for obtaining industrial licenses',
+        s7_title: 'Electronic System', s7_desc: 'E-invoice activation, Token extraction and update',
+        s7_d1: 'Activating e-invoice Portal', s7_d2: 'Extracting and updating Token', s7_d3: 'Issuing and sending electronic invoices', s7_d4: 'Following up sale and purchase invoices on the system', s7_d5: 'Reviewing returns and preparing invoices', s7_d6: 'Adding and updating item codes',
+        s8_title: 'Social Insurance', s8_desc: 'Opening files, submitting returns, settling dues',
+        s8_d1: 'Opening social insurance files for companies', s8_d2: 'Submitting monthly and annual returns', s8_d3: 'Settling insurance dues', s8_d4: 'Following up pension and compensation procedures', s8_d5: 'Dealing with the General Authority for Social Insurance',
+        s9_title: 'Accounting Services', s9_desc: 'Bookkeeping, budgets, financial statements',
+        s9_d1: 'Maintaining accounting books and records', s9_d2: 'Preparing balance sheets', s9_d3: 'Preparing financial statements', s9_d4: 'Reviewing final accounts', s9_d5: 'Designing accounting systems', s9_d6: 'Financial and accounting consulting',
+        cta_title: 'Need Tax or Accounting Consultation?', cta_desc: 'Contact us now via WhatsApp and get a free consultation', cta_btn: 'Chat on WhatsApp',
+        partners_title: 'We Work with Government Entities & Institutions',
+        testimonials_label: 'Client Reviews', testimonials_title: 'What Our Clients Say', testimonials_desc: 'We pride ourselves on our clients\' trust and ongoing partnership',
+        t1_text: '"Very professional office in handling tax returns. They helped us settle accumulated tax files from years ago with great professionalism."', t1_name: 'Ahmed Mohamed', t1_role: 'Business Owner',
+        t2_text: '"Excellent service in company formation and commercial register procedures. All transactions were completed in record time at reasonable prices."', t2_name: 'Sara Ali', t2_role: 'Consulting Firm Founder',
+        t3_text: '"We have been working with the office for over 5 years on all accounting and tax matters. We completely trust them and they save us a lot of time and effort."', t3_name: 'Mahmoud Hassan', t3_role: 'Factory Manager',
+        comments_label: 'Reviews', comments_title: 'Share Your Opinion', comments_desc: 'We are happy to hear your feedback and suggestions to improve our services',
+        comment_form_title: 'Add Your Review', comment_name_label: 'Name', comment_text_label: 'Review', comment_submit: 'Submit Review', comment_empty: 'No reviews yet. Be the first to rate us!',
+        contact_label: 'Contact Us', contact_title: 'Get in Touch Now', contact_desc: 'We are here to help you with all your inquiries',
+        contact_info_title: 'Contact Information', contact_info_desc: 'Contact us directly via the numbers below or fill out the form and we will respond as soon as possible.',
+        contact_whatsapp: 'WhatsApp', contact_phone: 'Call', contact_address: 'Address', contact_address_text: '52 Al Matrya Museum, Helmeyat AZ Zaytoun, Ain Shams, Cairo',
+        contact_form_title: 'Send a Message', form_name: 'Name', form_phone: 'Phone Number', form_service: 'Required Service', form_service_placeholder: 'Choose a service', form_service_tax: 'Tax Services', form_service_audit: 'Tax Audit', form_service_company: 'Company Formation', form_service_commercial: 'Commercial Register', form_service_import: 'Import & Export', form_service_industrial: 'Industrial Register', form_service_electronic: 'Electronic System', form_service_insurance: 'Social Insurance', form_service_accounting: 'Accounting Services', form_service_other: 'Other', form_message: 'Message', form_submit: 'Send Message',
+        footer_desc: 'The Advisory Office for Auditing and Accounting — Your trusted partner in all accounting and tax services since 2014.',
+        footer_links: 'Quick Links', footer_services: 'Our Services', footer_contact: 'Contact Us',
+        footer_copyright: '© 2024 Advisory Office for Auditing & Accounting — Amr Qutb. All Rights Reserved.'
+    }
+};
+
+var currentLang = 'ar';
+
+function toggleLanguage() {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    applyTranslations();
+    var label = currentLang === 'ar' ? 'English' : 'عربي';
+    document.getElementById('langLabel').textContent = label;
+    document.getElementById('langLabelMobile').textContent = label;
+    document.documentElement.lang = currentLang;
+    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+    localStorage.setItem('lang', currentLang);
+}
+
+function applyTranslations() {
+    var t = translations[currentLang];
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (t[key]) {
+            el.textContent = t[key];
+        }
+    });
+}
+
+if (localStorage.getItem('lang') === 'en') {
+    currentLang = 'en';
+    applyTranslations();
+    document.getElementById('langLabel').textContent = 'عربي';
+    document.getElementById('langLabelMobile').textContent = 'عربي';
+    document.documentElement.lang = 'en';
+    document.documentElement.dir = 'ltr';
+}
+
+// Comments
+function addComment() {
+    var name = document.getElementById('commentName').value.trim();
+    var text = document.getElementById('commentText').value.trim();
+    if (!name || !text) return;
+    var list = document.getElementById('commentsList');
+    var empty = list.querySelector('.comment-empty');
+    if (empty) empty.remove();
+    var initial = name.charAt(0).toUpperCase();
+    var now = new Date();
+    var dateStr = now.toLocaleDateString(currentLang === 'ar' ? 'ar-EG' : 'en-US');
+    var item = document.createElement('div');
+    item.className = 'comment-item';
+    item.innerHTML = '<div class="comment-header"><div class="comment-avatar">' + initial + '</div><span class="comment-name">' + name + '</span><span class="comment-date">' + dateStr + '</span></div><div class="comment-text">' + text + '</div>';
+    list.insertBefore(item, list.firstChild);
+    document.getElementById('commentName').value = '';
+    document.getElementById('commentText').value = '';
+}
+
+// Contact form
+function submitContactForm() {
+    var name = document.getElementById('contactName').value.trim();
+    var phone = document.getElementById('contactPhone').value.trim();
+    var service = document.getElementById('contactService').value;
+    var message = document.getElementById('contactMessage').value.trim();
+    var msgEl = document.getElementById('formMessage');
+    if (!name || !phone || !message) {
+        msgEl.className = 'form-message error';
+        msgEl.textContent = currentLang === 'ar' ? 'يرجى ملء جميع الحقول المطلوبة' : 'Please fill in all required fields';
+        return;
+    }
+    msgEl.className = 'form-message success';
+    msgEl.textContent = currentLang === 'ar' ? 'تم إرسال رسالتك بنجاح! سنتواصل معك قريباً' : 'Your message has been sent successfully! We will contact you soon';
+    document.getElementById('contactName').value = '';
+    document.getElementById('contactPhone').value = '';
+    document.getElementById('contactService').value = '';
+    document.getElementById('contactMessage').value = '';
+    setTimeout(function() { msgEl.className = 'form-message'; }, 5000);
+}
+</script>
+</body>
+</html>
 
     applyTranslations(currentLang);
 }
